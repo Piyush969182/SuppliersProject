@@ -1,0 +1,89 @@
+<div class="container" style="padding-top:20px;">
+    <div class="office">
+        <!-- <h1>Add Form</h1> -->
+        <form [formGroup]="getSuppliers">
+            <div class="card">
+                <h2>Update Suppliers</h2>
+                <div class="row">
+                    <div class="col-md-5">
+                        <label for="">Supplier Id </label>
+                        <br>
+                        <input type="number" placeholder="Supplier Id" formControlName="supplier_id">
+                        <br>
+                    </div>
+                    <br>
+                    <div class="col-md-5">
+                        <label for="">Name </label>
+                        <br>
+                        <input type="text" placeholder="Name" formControlName="name">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-5">
+                        <label for="">Product Id </label>
+                        <br>
+                        <input type="number" placeholder="Product Id" formControlName="id">
+                    </div>
+                    <div class="col-md-5">
+                        <label for="">Product Name </label>
+                        <br>
+                        <input type="text" placeholder="Product Name" formControlName="product_name">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-5">
+                        <label for="">Price </label>
+                        <br>
+                        <input type="number" placeholder="Price" formControlName="price">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <h2>Update Billing Address</h2>
+                <div class="row">
+                    <div class="col-md-5">
+                        <label for="">AddressLine1 </label>
+                        <br>
+                        <input type="text" placeholder="AddressLine1" formControlName="address1">
+                    </div>
+                    <br>
+                    <div class="col-md-5">
+                        <label for="">AddressLine2 </label>
+                        <br>
+                        <input type="text" placeholder="AddressLine2" formControlName="address2">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-5">
+                        <label for="">City </label>
+                        <br>
+                        <input type="text" placeholder="City" formControlName="city">
+                    </div>
+                    <br>
+
+                    <div class="col-md-5">
+                        <label for="">State </label>
+                        <br>
+                        <input type="text" placeholder="State" formControlName="state">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-5">
+                        <label for="">Country </label>
+                        <br>
+                        <input type="text" placeholder="Country" formControlName="country">
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <button type="submit" class="btn btn-primary">Update</button>&nbsp;
+            <button routerLink="../../" class="btn btn-primary">Back</button>
+        </form>
+    </div>
+</div>

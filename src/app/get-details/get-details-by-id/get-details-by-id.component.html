@@ -1,0 +1,81 @@
+<div class="container">
+  <div class="office">
+    <h2 style="align-items: center;">Supplier Details</h2>
+    <br>
+    <div class="card">
+      <form [formGroup]="getSuppliers">
+        <div class="row">
+          <div class="col-md-3">
+            <label for="">Supplier Id: </label>
+            <br>
+            <input type="text" formControlName="supplier_id" readonly>
+          </div>
+          <br>
+          <div class="col-md-3">
+            <label for="">Name: </label>
+            <br>
+            <input type="text" formControlName="name" readonly>
+          </div>
+          <br>
+          <div class="col-md-3">
+            <label for="">Product Id: </label>
+            <br>
+            <input type="text" formControlName="id" readonly>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-3">
+            <label for="">Product Name: </label>
+            <br>
+            <input type="text" formControlName="product_name" readonly>
+          </div>
+          <br>
+
+          <div class="col-md-3">
+            <label for="">Price: </label>
+            <br>
+            <input type="text" formControlName="price" readonly>
+          </div>
+          <br>
+
+          <div class="col-md-3">
+            <label for="">AddressLine1: </label>
+            <br>
+            <input type="text" formControlName="address1" readonly>
+          </div>
+          <br>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-3">
+            <label for="">AddressLine2: </label>
+            <br>
+            <input type="text" formControlName="address2" readonly>
+          </div>
+          <br>
+
+          <div class="col-md-3">
+            <label for="">City: </label>
+            <br>
+            <input type="text" formControlName="city" readonly>
+          </div>
+          <br>
+
+          <div class="col-md-3">
+            <label for="">State: </label>
+            <br>
+            <input type="text" formControlName="state" readonly>
+          </div>
+        </div>
+        <br>
+        <div>
+          <label for="">Country: </label>
+          <br>
+          <input type="text" formControlName="country" readonly> 
+        </div>
+        <br>
+      </form>
+    </div>
+  </div>
+</div>

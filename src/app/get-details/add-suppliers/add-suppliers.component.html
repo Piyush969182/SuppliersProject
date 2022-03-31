@@ -1,0 +1,113 @@
+<div class="container" style="padding-top:20px;">
+  <div class="office">
+    <!-- <h1>Add Form</h1> -->
+    <form [formGroup]="addSuppliers" (ngSubmit)="addSupplier()">
+      <div class="card">
+        <h2>Add Suppliers</h2>
+        <div class="row">
+          <div class="col-md-5">
+            <label for="">Supplier Id </label>
+            <input type="number" class="form-control" placeholder="Supplier Id" formControlName="supplier_id">
+            <span *ngIf="f['supplier_id']?.errors?.['required'] && f['supplier_id'].touched">*This field is
+              required</span>
+            <!-- <span *ngIf="supplier_id?.errors?.['minlength'] && supplier_id?.touched">* Enter minimum 3 char</span> -->
+          </div>
+          <br>
+          <div class="col-md-5">
+            <label for="">Name </label>
+            <input type="text" class="form-control" placeholder="Name" formControlName="name">
+            <!-- <span *ngIf="name && name.invalid && name.touched">*This field is required</span> -->
+            <!-- <span *ngIf="name?.errors?.['required'] && name?.touched">*This field is required</span> -->
+            <span *ngIf="f['name']?.errors?.['required'] && f['name']?.touched">*This field is required</span>
+            <span *ngIf="f['name']?.errors?.['maxlength'] && f['name']?.touched">* Maximum length exceed</span>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-5">
+            <label for="">Product Id </label>
+            <input type="number" class="form-control" placeholder="Product Id" formControlName="id">
+            <span *ngIf="f['id']?.errors?.['required'] && f['id'].touched">*This field is required</span>
+          </div>
+          <div class="col-md-5">
+            <label for="">Product Name </label>
+            <input type="text" class="form-control" placeholder="Product Name" formControlName="product_name">
+            <span *ngIf="f['product_name']?.errors?.['required'] && f['product_name'].touched">*This field is
+              required</span>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-5">
+            <label for="">Price </label>
+            <input type="number" class="form-control" placeholder="Price" formControlName="price">
+            <span *ngIf="f['price']?.errors?.['required'] && f['price'].touched">*This field is required</span>
+          </div>
+        </div>
+      </div>
+      <br>
+      <app-add-supplier-address [billingAddress]="addSuppliers"></app-add-supplier-address>
+      <br>
+      <button [disabled]="addSuppliers.invalid" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- {{addSuppliers.value | json}} -->
+
+<!-- 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="container" ></div>
+        <img src="../assets/background.jpg" style="height: fit-content;" alt="">
+      </div>
+      <div style="background-color: red;" class="col">
+        <div class="container">
+          <div class="office">
+            <h2 style="align-items: center;">Add Suppliers</h2>
+            <form [formGroup]="addSuppliers" (ngSubmit)="addSupplier()">
+              <div>
+                <label for="">Supplier Id: </label>
+                <br>
+                <input type="text" placeholder="Supplier Id" formControlName="supplier_id">
+                <span *ngIf="supplier_id && supplier_id.invalid && supplier_id.touched">*This field is required</span>
+              </div>
+              <br>
+              <div>
+                <label for="">Name: </label>
+                <br>
+                <input type="text" placeholder="Name" formControlName="name">
+                <span *ngIf="name && name.invalid && name.touched">*This field is required</span>
+              </div>
+              <br>
+              <div>
+                <label for="">Product Id: </label>
+                <br>
+                <input type="text" placeholder="Product Id" formControlName="id">
+                <span *ngIf="id && id.invalid && id.touched">*This field is required</span>
+              </div>
+              <br>
+  
+              <div>
+                <label for="">Product Name: </label>
+                <br>
+                <input type="text" placeholder="Product Name" formControlName="product_name">
+                <span *ngIf="product_name && product_name.invalid && product_name.touched">*This field is required</span>
+              </div>
+              <br>
+              <div>
+                <label for="">Price: </label>
+                <br>
+                <input type="text" placeholder="Price" formControlName="price">
+                <span *ngIf="price && price.invalid && price.touched">*This field is required</span>
+              </div>
+              <br>
+              <br>
+              <button [disabled]="addSuppliers.invalid" type="submit" background-color="blue">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->

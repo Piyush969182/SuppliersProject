@@ -1,0 +1,44 @@
+<div class="card">
+    <h2>Billing Address</h2>
+    <form [formGroup]="billingAddress">
+        <div formGroupName="supplierAddress">
+            <div class="row">
+                <div class="col-md-5">
+                    <label for="">AddressLine1 </label>
+                    <input type="text" class="form-control" placeholder="AddressLine1" formControlName="address1">
+                    <span *ngIf="f['address1']?.errors?.['required'] && f['address1'].touched">*This field is required</span>
+                </div>
+                <br>
+                <div class="col-md-5">
+                    <label for="">AddressLine2 </label>
+                    <input type="text" class="form-control" placeholder="AddressLine2" formControlName="address2">
+                    <span *ngIf="f['address2']?.errors?.['required'] && f['address2'].touched">*This field is required</span>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-5">
+                    <label for="">City </label>
+                    <input type="text" class="form-control" class="form-control" placeholder="City" formControlName="city">
+                    <span *ngIf="f['city']?.errors?.['required'] && f['city'].touched">*This field is required</span>
+                </div>
+                <br>
+    
+                <div class="col-md-5">
+                    <label for="">State </label>
+                    <input type="text" class="form-control" class="form-control" placeholder="State" formControlName="state">
+                    <span *ngIf="f['state']?.errors?.['required'] && f['state'].touched">*This field is required</span>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-5">
+                    <label for="">Country </label>
+                    <input type="text" class="form-control" placeholder="Country" formControlName="country">
+                    <span *ngIf="f['country']?.errors?.['required'] && f['country'].touched">*This field is required</span>
+                </div>
+            </div>
+        </div>
+        
+    </form>
+</div>
