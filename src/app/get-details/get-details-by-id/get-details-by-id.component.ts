@@ -12,7 +12,7 @@ export class GetDetailsByIdComponent implements OnInit {
   getSuppliers: FormGroup
   id!: number;
   details = {}
-  constructor(private fb: FormBuilder, private route: ActivatedRoute, private suppliersServices:SupplierService) {
+  constructor(private fb: FormBuilder, private route: ActivatedRoute, private suppliersServices: SupplierService) {
     this.getSuppliers = this.fb.group({
       supplier_id: [''],
       name: [''],
@@ -29,7 +29,10 @@ export class GetDetailsByIdComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = Number(this.route.snapshot.paramMap.get('id'));
-    this.details=this.suppliersServices.getDetailsById(this.id)
+    this.details = this.suppliersServices.getDetailsById(this.id)
+    this.suppliersServices.getById(this.id).subscribe(s => {
+      console.log(s);
+    })
     this.getSuppliers.patchValue(this.details);
   }
 

@@ -22,7 +22,6 @@ import { EditSupplierComponent } from './edit-supplier/edit-supplier.component';
     GetDetailsRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-   
   ]
 })
 export class GetDetailsModule { }

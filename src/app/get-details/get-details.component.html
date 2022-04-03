@@ -25,7 +25,9 @@
                         <button class="btn btn-primary btn-sm"
                             [routerLink]="['getDetailsById',list.supplier_id]">View</button>&nbsp;
                         <button class="btn btn-primary btn-sm"
-                            [routerLink]="['editSupplier',list.supplier_id]">Edit</button>
+                            [routerLink]="['editSupplier',list.supplier_id]">Edit</button>&nbsp;
+                        <!-- <button class="btn btn-primary btn-sm"
+                            (click)="delete(list.supplier_id)">Delete</button> -->
                     </td>
                 </tr>
             </tbody>

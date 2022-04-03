@@ -26,7 +26,7 @@ export class AddSuppliersComponent implements OnInit {
     this.addSuppliers=this.fb.group({
       supplier_id:['',[Validators.required]],
       name:['',[Validators.required,Validators.maxLength(15)]],
-      id:['',Validators.required],
+      product_id:['',Validators.required],
       product_name:['',Validators.required],
       price:['',Validators.required],
       supplierAddress:this.billingAddress

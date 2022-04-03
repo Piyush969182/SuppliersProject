@@ -8,7 +8,7 @@ import { GetDetailsComponent } from './get-details/get-details.component';
 import { FilterPipe } from './filter/filter.pipe';
 import { AddSupplierAddressComponent } from './get-details/add-supplier-address/add-supplier-address.component';
 import { HomeComponent } from './home/home.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
